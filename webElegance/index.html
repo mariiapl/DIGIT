@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance+</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Elegance+</div>
+        <nav class="nav">
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="carrito" onclick="mostrarCarrito()">
+            <span id="carrito-count">0</span> 🛒
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Complementos Elegantes</h1>
+            <p>Descubre los mejores accesorios para cada ocasión.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <h2>Nuestros productos</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="images/bolso.png" alt="Bolso Elegante">
+                <h3>Bolso Elegante</h3>
+                <p>$150.00</p>
+                <button class="btn btn-comprar" onclick="agregarAlCarrito('Bolso Elegante', 150)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="images/pulsera.png" alt="Pulsera de Perlas">
+                <h3>Pulsera de Perlas</h3>
+                <p>$100.00</p>
+                <button class="btn btn-comprar" onclick="agregarAlCarrito('Pulsera de Perlas', 100)">Comprar</button>
+            </div>
+
+            <div class="producto">
+                <img src="images/reloj.png" alt="Reloj Vintage">
+                <h3>Reloj Vintage</h3>
+                <p>$200.00</p>
+                <button class="btn btn-comprar" onclick="agregarAlCarrito('Reloj Vintage', 200)">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <div class="nosotros-contenido">
+            <h2>Sobre nosotros</h2>
+            <p>En <strong>Elegance+</strong>, ofrecemos productos de lujo para realzar tu estilo. Combinamos calidad y elegancia en cada uno de nuestros accesorios, pensados para quienes buscan lo mejor.</p>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="contacto-contenido">
+            <h2>Contáctanos</h2>
+            <form action="#">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Tu mensaje" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Elegance+. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="carrito-modal" class="carrito-modal">
+        <div class="carrito-content">
+            <h3>Tu Carrito</h3>
+            <ul id="carrito-list"></ul>
+            <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button onclick="cerrarCarrito()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
